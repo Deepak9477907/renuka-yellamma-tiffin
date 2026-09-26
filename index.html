@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#8b1e1e" />
+  <title>ಶ್ರೀ ರೇಣುಕಾ ಯಲ್ಲಮ್ಮ ಟಿಫಿನ್ ಸೆಂಟರ್</title>
+  <meta name="description" content="Fresh South Indian breakfast and tiffin at ಶ್ರೀ ರೇಣುಕಾ ಯಲ್ಲಮ್ಮ ಟಿಫಿನ್ ಸೆಂಟರ್, RK Resorts, Totadaguddadahalli. Order on WhatsApp or visit us." />
+  <style>
+    :root{
+      --maroon:#8b1e1e;
+      --deep:#4a1515;
+      --gold:#f2b84b;
+      --cream:#fff7e8;
+      --ink:#2b211b;
+      --green:#1fa463;
+      --card:#fffdf8;
+      --muted:#74665f;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Noto Sans Kannada", "Segoe UI", sans-serif;
+      color:var(--ink);
+      background:var(--cream);
+      line-height:1.5;
+    }
+    a{text-decoration:none;color:inherit}
+    .topbar{
+      background:var(--deep);
+      color:#fff;
+      padding:8px 16px;
+      text-align:center;
+      font-size:14px;
+    }
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,247,232,.96);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid #ecd9bd;
+    }
+    nav{
+      max-width:1100px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:12px 18px;
+      gap:18px;
+    }
+    .brand{
+      font-weight:800;
+      color:var(--maroon);
+      line-height:1.25;
+      font-size:18px;
+      max-width:560px;
+    }
+    .navlinks{
+      display:flex;
+      gap:16px;
+      font-size:14px;
+      font-weight:700;
+    }
+    .hero{
+      max-width:1100px;
+      margin:0 auto;
+      padding:56px 18px 36px;
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:28px;
+      align-items:center;
+    }
+    .eyebrow{
+      display:inline-block;
+      background:#f8e5be;
+      color:var(--deep);
+      border:1px solid #edcf95;
+      border-radius:999px;
+      padding:7px 12px;
+      font-weight:800;
+      font-size:13px;
+      margin-bottom:14px;
+    }
+    h1{
+      color:var(--maroon);
+      font-size:clamp(36px,6vw,68px);
+      line-height:1.05;
+      margin:0 0 16px;
+    }
+    .hero p{
+      font-size:18px;
+      color:var(--muted);
+      max-width:660px;
+    }
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:22px;
+    }
+    .btn{
+      border:none;
+      border-radius:14px;
+      padding:14px 18px;
+      font-weight:800;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      box-shadow:0 6px 18px rgba(74,21,21,.08);
+    }
+    .btn.primary{background:var(--green);color:#fff}
+    .btn.secondary{background:var(--maroon);color:#fff}
+    .btn.light{background:#fff;border:1px solid #e6cfaa}
+    .hero-card{
+      min-height:360px;
+      border-radius:28px;
+      background:
+        radial-gradient(circle at 75% 25%, rgba(242,184,75,.55), transparent 28%),
+        linear-gradient(145deg, #a52a2a, #5c1616);
+      color:#fff;
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      box-shadow:0 20px 45px rgba(74,21,21,.18);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero-card::after{
+      content:"🍽️";
+      font-size:170px;
+      position:absolute;
+      right:-18px;
+      bottom:-28px;
+      opacity:.18;
+      transform:rotate(-8deg);
+    }
+    .hero-card .big{font-size:30px;font-weight:900;max-width:300px}
+    .hero-card .meta{display:grid;gap:10px;font-size:15px;position:relative;z-index:2}
+    section{padding:58px 18px}
+    .section-inner{max-width:1100px;margin:auto}
+    .section-title{
+      font-size:clamp(28px,4vw,42px);
+      color:var(--maroon);
+      margin:0 0 8px;
+    }
+    .section-sub{
+      color:var(--muted);
+      margin:0 0 24px;
+    }
+    .menu-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+    .menu-card{
+      background:var(--card);
+      border:1px solid #ecd9bd;
+      border-radius:20px;
+      padding:18px;
+      box-shadow:0 10px 28px rgba(74,21,21,.06);
+    }
+    .food-icon{
+      width:54px;height:54px;border-radius:16px;background:#f9e5bd;
+      display:grid;place-items:center;font-size:28px;margin-bottom:14px
+    }
+    .menu-card h3{margin:0 0 4px;font-size:18px}
+    .menu-card small{color:var(--muted)}
+    .price{
+      color:var(--maroon);
+      font-weight:900;
+      margin:12px 0;
+      font-size:18px;
+    }
+    .qty{
+      display:flex;align-items:center;gap:8px;
+      margin-bottom:10px;
+    }
+    .qty button{
+      width:34px;height:34px;border-radius:10px;border:1px solid #dfc89f;background:#fff;font-size:18px;font-weight:900;cursor:pointer;
+    }
+    .qty span{min-width:22px;text-align:center;font-weight:800}
+    .order-card-btn{
+      width:100%;
+      border:none;border-radius:12px;
+      padding:10px 12px;
+      background:var(--maroon);
+      color:#fff;font-weight:800;cursor:pointer;
+    }
+    .features{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:16px
+    }
+    .feature{
+      background:#fff;border:1px solid #ecd9bd;border-radius:20px;padding:20px
+    }
+    .feature b{display:block;margin-bottom:6px;color:var(--maroon)}
+    .contact{
+      background:linear-gradient(135deg,#5a1717,#8b1e1e);
+      color:#fff;
+      border-radius:28px;
+      padding:30px;
+      display:grid;grid-template-columns:1fr 1fr;gap:20px;
+    }
+    .contact h2{margin-top:0;font-size:34px}
+    .contact p{opacity:.9}
+    .contact-actions{display:flex;flex-wrap:wrap;gap:12px;align-content:start}
+    .contact .btn.light{color:var(--deep)}
+    footer{
+      padding:26px 18px;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .floating-wa{
+      position:fixed;
+      right:18px;bottom:18px;
+      z-index:70;
+      background:var(--green);color:#fff;
+      width:58px;height:58px;border-radius:50%;
+      display:grid;place-items:center;
+      font-size:27px;
+      box-shadow:0 12px 30px rgba(0,0,0,.18);
+    }
+    .cartbar{
+      position:fixed;
+      left:50%;transform:translateX(-50%);
+      bottom:16px;
+      width:min(740px,calc(100% - 96px));
+      background:#241818;color:#fff;
+      border-radius:16px;padding:12px 14px;
+      z-index:65;
+      display:none;align-items:center;justify-content:space-between;gap:12px;
+      box-shadow:0 14px 40px rgba(0,0,0,.22);
+    }
+    .cartbar.show{display:flex}
+    .cartbar button{background:var(--green);color:#fff;border:none;border-radius:12px;padding:11px 14px;font-weight:900;cursor:pointer}
+
+    .payment-wrap{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:22px;
+      align-items:center;
+      background:#fff;
+      border:1px solid #ecd9bd;
+      border-radius:26px;
+      padding:24px;
+      box-shadow:0 12px 32px rgba(74,21,21,.07);
+    }
+    .qr-box{
+      background:#111;
+      border-radius:22px;
+      padding:18px;
+      text-align:center;
+    }
+    .qr-box img{
+      width:min(100%,360px);
+      border-radius:14px;
+      display:block;
+      margin:auto;
+    }
+    .payment-details h3{
+      margin:0 0 8px;
+      color:var(--maroon);
+      font-size:26px;
+    }
+    .upi-id{
+      display:inline-block;
+      background:#f8e5be;
+      border:1px solid #edcf95;
+      border-radius:12px;
+      padding:10px 12px;
+      font-weight:900;
+      margin:8px 0 14px;
+      word-break:break-all;
+    }
+    .pay-note{
+      color:var(--muted);
+      font-size:14px;
+      margin-top:12px;
+    }
+    .payment-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:16px;
+    }
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .hero-card{min-height:280px}
+      .menu-grid{grid-template-columns:repeat(2,1fr)}
+      .features{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+      .payment-wrap{grid-template-columns:1fr}
+      .navlinks{display:none}
+    }
+    @media(max-width:560px){
+      .hero{padding-top:34px}
+      h1{font-size:42px}
+      .menu-grid{grid-template-columns:1fr}
+      .btn{width:100%;justify-content:center}
+      .cartbar{left:14px;transform:none;width:calc(100% - 88px)}
+      .brand{font-size:16px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">Open daily: 6:00 AM – 8:00 PM • RK Resorts, Totadaguddadahalli</div>
+
+  <header>
+    <nav>
+      <div class="brand">ಶ್ರೀ ರೇಣುಕಾ ಯಲ್ಲಮ್ಮ ಟಿಫಿನ್ ಸೆಂಟರ್</div>
+      <div class="navlinks">
+        <a href="#menu">Menu</a>
+        <a href="#payment">Payment</a>
+        <a href="#visit">Visit</a>
+        <a href="tel:+919741944625">Call</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <span class="eyebrow">Traditional taste • Freshly prepared</span>
+        <h1>ಶ್ರೀ ರೇಣುಕಾ ಯಲ್ಲಮ್ಮ ಟಿಫಿನ್ ಸೆಂಟರ್</h1>
+        <p>Fresh, tasty and affordable South Indian tiffin. Order quickly on WhatsApp or visit us at RK Resorts, Totadaguddadahalli.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://wa.me/919741944625?text=ನಮಸ್ಕಾರ%2C%20ನಾನು%20ಶ್ರೀ%20ರೇಣುಕಾ%20ಯಲ್ಲಮ್ಮ%20ಟಿಫಿನ್%20ಸೆಂಟರ್‌ನಿಂದ%20ಆರ್ಡರ್%20ಮಾಡಲು%20ಬಯಸುತ್ತೇನೆ." target="_blank">💬 Order on WhatsApp</a>
+          <a class="btn secondary" href="#menu">🍽️ View Menu</a>
+          <a class="btn light" href="https://www.google.com/maps/search/?api=1&query=RK+Resorts%2C+Totadaguddadahalli" target="_blank">📍 Get Directions</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="big">ಬೆಳಿಗ್ಗೆಯಿಂದ ರಾತ್ರಿ ತನಕ ತಾಜಾ ಟಿಫಿನ್</div>
+        <div class="meta">
+          <div>🕕 6:00 AM – 8:00 PM</div>
+          <div>📍 RK Resorts, Totadaguddadahalli</div>
+          <div>📞 97419 44625</div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="menu">
+      <div class="section-inner">
+        <h2 class="section-title">Our Menu</h2>
+        <p class="section-sub">Choose your items and send the order directly through WhatsApp. Prices can be updated once your final menu is confirmed.</p>
+        <div class="menu-grid" id="menuGrid"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <h2 class="section-title">Why customers choose us</h2>
+        <div class="features">
+          <div class="feature"><b>🔥 Freshly prepared</b>Simple, comforting tiffin prepared for everyday breakfast and meals.</div>
+          <div class="feature"><b>💬 Easy WhatsApp ordering</b>Select items on the website and send the order in one tap.</div>
+          <div class="feature"><b>📍 Easy for walk-ins</b>Clear location, opening hours, call button and directions are always visible.</div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="payment">
+      <div class="section-inner">
+        <h2 class="section-title">Payment</h2>
+        <p class="section-sub">Pay securely using any UPI app or scan the PhonePe QR code.</p>
+        <div class="payment-wrap">
+          <div class="qr-box">
+            <img src="phonepe_qr.jpg" alt="PhonePe UPI QR code for payment">
+          </div>
+          <div class="payment-details">
+            <h3>UPI Payment</h3>
+            <p>Use PhonePe, Google Pay, Paytm, BHIM or any UPI-enabled app.</p>
+            <div class="upi-id">9741944625@ybl</div>
+            <div class="payment-actions">
+              <a class="btn primary" href="upi://pay?pa=9741944625%40ybl&pn=THANUJA%20S&cu=INR">📲 Open UPI App</a>
+              <a class="btn secondary" href="https://wa.me/919741944625?text=ನಮಸ್ಕಾರ%2C%20ನಾನು%20ಪಾವತಿ%20ಮಾಡಿದ್ದೇನೆ.%20ದಯವಿಟ್ಟು%20ನನ್ನ%20ಆರ್ಡರ್%20ದೃಢೀಕರಿಸಿ." target="_blank">✅ Send Payment Confirmation</a>
+            </div>
+            <p class="pay-note"><strong>Important:</strong> This website does not automatically verify UPI payments yet. After paying, please send the payment screenshot or UTR/reference number on WhatsApp so the order can be confirmed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit">
+      <div class="section-inner contact">
+        <div>
+          <h2>Visit or order today</h2>
+          <p><strong>ಶ್ರೀ ರೇಣುಕಾ ಯಲ್ಲಮ್ಮ ಟಿಫಿನ್ ಸೆಂಟರ್</strong><br>
+          RK Resorts, Totadaguddadahalli<br>
+          Open: 6:00 AM – 8:00 PM<br>UPI: 9741944625@ybl</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn light" href="tel:+919741944625">📞 Call 97419 44625</a>
+          <a class="btn light" href="https://wa.me/919741944625" target="_blank">💬 WhatsApp</a>
+          <a class="btn light" href="https://www.google.com/maps/search/?api=1&query=RK+Resorts%2C+Totadaguddadahalli" target="_blank">📍 Directions</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> ಶ್ರೀ ರೇಣುಕಾ ಯಲ್ಲಮ್ಮ ಟಿಫಿನ್ ಸೆಂಟರ್ • RK Resorts, Totadaguddadahalli
+  </footer>
+
+  <a class="floating-wa" aria-label="WhatsApp" href="https://wa.me/919741944625" target="_blank">💬</a>
+
+  <div class="cartbar" id="cartbar">
+    <div><strong id="cartCount">0 items</strong><br><small>Ready to send your order</small></div>
+    <button onclick="sendOrder()">Send on WhatsApp</button>
+  </div>
+
+  <script>
+    const menu = [
+      {kn:"ತಟ್ಟೆ ಇಡ್ಲಿ", en:"Thatte Idly", icon:"🥣", price:null},
+      {kn:"ಮಸಾಲೆ ದೋಸೆ", en:"Masala Dose", icon:"🥞", price:null},
+      {kn:"ಪೂರಿ", en:"Poori", icon:"🍛", price:null},
+      {kn:"ಪಡ್ಡು", en:"Paddu", icon:"🫓", price:null},
+      {kn:"ಚಿತ್ರಾನ್ನ", en:"Chitranna", icon:"🍋", price:null},
+      {kn:"ಪುಳಿಯೋಗರೆ", en:"Puliyogare", icon:"🍚", price:null},
+      {kn:"ಪಲಾವ್", en:"Pulav", icon:"🍲", price:null},
+      {kn:"ಬಿಸಿಬೇಳೆ ಬಾತ್", en:"Bisibele Bath", icon:"🥘", price:null}
+    ];
+
+    const cart = {};
+    const grid = document.getElementById("menuGrid");
+
+    menu.forEach((item, i) => {
+      const card = document.createElement("div");
+      card.className = "menu-card";
+      card.innerHTML = `
+        <div class="food-icon">${item.icon}</div>
+        <h3>${item.kn}</h3>
+        <small>${item.en}</small>
+        <div class="price">${item.price ? "₹"+item.price : "Price to be updated"}</div>
+        <div class="qty">
+          <button onclick="changeQty(${i}, -1)">−</button>
+          <span id="q${i}">0</span>
+          <button onclick="changeQty(${i}, 1)">+</button>
+        </div>
+        <button class="order-card-btn" onclick="quickAdd(${i})">Add to order</button>
+      `;
+      grid.appendChild(card);
+    });
+
+    function changeQty(i, delta){
+      cart[i] = Math.max(0, (cart[i] || 0) + delta);
+      document.getElementById("q"+i).textContent = cart[i];
+      refreshCart();
+    }
+
+    function quickAdd(i){
+      changeQty(i,1);
+    }
+
+    function refreshCart(){
+      const total = Object.values(cart).reduce((a,b)=>a+b,0);
+      document.getElementById("cartCount").textContent = total + (total===1 ? " item" : " items");
+      document.getElementById("cartbar").classList.toggle("show", total>0);
+    }
+
+    function sendOrder(){
+      const selected = [];
+      Object.entries(cart).forEach(([i,q]) => {
+        if(q>0) selected.push(`${menu[i].kn} (${menu[i].en}) x ${q}`);
+      });
+      const message = `ನಮಸ್ಕಾರ, ನಾನು ಆರ್ಡರ್ ಮಾಡಬೇಕು:%0A%0A${selected.map(x=>"• "+x).join("%0A")}%0A%0Aದಯವಿಟ್ಟು ಲಭ್ಯತೆ ಮತ್ತು ಒಟ್ಟು ಮೊತ್ತ ತಿಳಿಸಿ.`;
+      window.open(`https://wa.me/919741944625?text=${message}`, "_blank");
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
